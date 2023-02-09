@@ -1,4 +1,4 @@
-import { createSlice, nanoid, createAsyncThunk } from '@reduxjs/toolkit'
+import { createSlice, nanoid, createAsyncThunk, createSelector } from '@reduxjs/toolkit'
 import { client } from '../../api/client'
 // import { sub } from 'date-fns'
 
@@ -116,3 +116,7 @@ export const selectAllPosts = state => state.posts.posts
 export const selectPostById = (state, postId) =>
     state.posts.posts.find(post => post.id === postId)
 
+export const selectPostsByUser = createSelector(
+    [selectAllPosts, (state, userId) => userId],
+    (posts, userId) => posts.filter(post => post.user === userId)
+)

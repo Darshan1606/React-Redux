@@ -5,7 +5,7 @@ const Spinner = ({ text = '', size = '5em' }) => {
   return (
     <div id="loader">
       {header}
-      <div class="spinner"></div>
+      <div className="spinner"></div>
     </div>
   )
 }
