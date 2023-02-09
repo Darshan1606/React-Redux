@@ -1,11 +1,12 @@
 import React from 'react'
 
-export const Spinner = ({ text = '', size = '5em' }) => {
+const Spinner = ({ text = '', size = '5em' }) => {
   const header = text ? <h4>{text}</h4> : null
   return (
-    <div className="spinner">
+    <div id="loader">
       {header}
-      <div className="loader" style={{ height: size, width: size }} />
+      <div class="spinner"></div>
     </div>
   )
 }
+export default Spinner
