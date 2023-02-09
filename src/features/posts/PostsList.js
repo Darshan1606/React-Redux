@@ -41,7 +41,7 @@ const PostsList = () => {
         }
     }, [postStatus, dispatch])
 
-    let content
+    let content;
 
     if (postStatus === 'loading') {
         content = <Spinner text="Loading..." />
