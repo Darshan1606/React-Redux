@@ -11,6 +11,7 @@ const Navbar = () => {
                 <div className="navContent">
                     <div className="navLinks">
                         <Link to="/">Posts</Link>
+                        <Link to="/addPost">Add New Post</Link>
                     </div>
                 </div>
             </section>
